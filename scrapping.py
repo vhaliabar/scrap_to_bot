@@ -44,9 +44,9 @@ while True:
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # extract title and link of first article
-    articles = soup.find_all('blog-post-card', class_='blog-post-card snap-center group')
+    articles = soup.find_all('blog-post-card', class_='blog-post-card blog-post-card--featured snap-center group rounded bg-secondary')
     #print(articles[0])
-    title = articles[0].find('p', class_='h3').text
+    title = articles[0].find('p', class_='h2').text
     link = articles[0].find('a')['href']
 
 
