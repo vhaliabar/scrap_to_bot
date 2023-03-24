@@ -56,8 +56,7 @@ def main():
             if title != prev_title or link != prev_link:
                 base_url = 'https://www.tesmanian.com'
                 url = base_url+link
-                send_to_telegram(f'New article:\n{title}')
-                send_to_telegram(f'Link:\n{url}')
+                send_to_telegram(f'New article:\n{title}\nLink:\n{url}')
 
                 # update previous title and link
                 prev_title = title
